@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      
+    </title>
+    <style>
+      body{
+        background-color: black;
+        color: white;
+      }
+      .special-buttons
+      {
+        background-color: orange;
+        color: white;
+      }
+      button{
+        background-color: rgb(25,25,25);
+        border: none;
+        color: white;
+        height: 75px;
+        width: 75px;
+        font-size: 30px;
+        border-radius: 50%;
+      }
+      .clear-button
+      {
+        font-size: 20px;
+        font-weight: 200;
+        font-family: arial;
+      }
+      .disp
+      {
+        
+        font-size: 40px;
+        font-weight: 300;
+        font-family: arial;
+        margin-top: 15px;
+        margin-bottom: 5px;
+        
+      }
+      
+    </style>
+
+  </head>
+  <body>
+    <p class="disp">
+
+    </p>
+    <p>
+      <button  class="" onclick="
+        calculation+='1';
+        console.log(calculation)
+        ;disp();">
+      1
+    </button>
+    <button onclick="
+        calculation+='2';
+        console.log(calculation);disp();">
+      2
+    </button>
+    <button onclick="
+        calculation+='3';
+        console.log(calculation);disp();">
+      3
+    </button>
+    <button class="special-buttons"
+    onclick="calculation+='+';console.log(calculation);disp();">
+      +
+    </button>
+    
+    </p>
+    <p>
+      <button onclick="
+        calculation+='4';
+        console.log(calculation);disp();">
+      4
+    </button>
+    <button onclick="
+        calculation+='5';
+        console.log(calculation);disp();">
+      5
+    </button>
+    <button onclick="
+        calculation+='6';
+        console.log(calculation);disp();">
+      6
+    </button>
+    <button onclick="calculation+='-';console.log(calculation);disp();"
+    class="special-buttons"
+    >
+      -
+    </button>
+    
+    </p>
+    <p>
+      <button onclick="
+        calculation+='7';
+        console.log(calculation);disp();">
+      7
+    </button>
+    <button onclick="
+        calculation+='8';
+        console.log(calculation);disp();">
+      8
+    </button>
+    <button onclick="
+        calculation+='9';
+        console.log(calculation);disp();">
+      9
+    </button>
+    <button onclick="calculation+='*';console.log(calculation);disp();"
+    class="special-buttons"
+    >
+      *
+    </button>
+    
+    </p>
+    <p>
+      <button onclick="
+        calculation+='0';
+        console.log(calculation);disp();">
+      0
+    </button>
+    <button onclick="
+        calculation+='.';
+        console.log(calculation);disp();">
+      .
+    </button>
+    <button onclick="let x=eval(calculation);
+    console.log(x);dispr(x);">
+      =
+    </button>
+    <button onclick="
+        calculation+='/';;disp();
+        console.log(calculation)"
+        class="special-buttons">
+      /
+    </button>
+
+    </p>
+    <button class="clear-button"
+    onclick="calculation='';disp()">
+      Clear
+    </button>
+    
+    <script>
+      let calculation="";
+      function disp()
+      {
+        document.querySelector('.disp').innerHTML=calculation;
+      }
+      function dispr(x)
+      {
+        calculation=x;
+        document.querySelector('.disp').innerHTML=x;
+      }
+
+    </script>
+  </body>
+</html>
